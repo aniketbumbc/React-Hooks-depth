@@ -7,7 +7,7 @@ const ListArray = () => {
   const addItem = (e) => {
     e.preventDefault();
     setItems([
-      ...items,
+      ...items, // copy exiting value from array and add new value into it
       {
         id: items.length,
         name: name,

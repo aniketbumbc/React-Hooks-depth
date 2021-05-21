@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import LengthText from './components/LengthText';
 import ListArray from './components/ListArray';
+import LoginFrom from './components/LoginFrom';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         maxLength={35}
       />
       <ListArray />
+      <LoginFrom />
     </div>
   );
 }
