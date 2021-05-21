@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import LengthText from './components/LengthText';
+import ListArray from './components/ListArray';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       towards completing it.`}
         maxLength={35}
       />
+      <ListArray />
     </div>
   );
 }
