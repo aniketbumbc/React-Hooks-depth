@@ -4,9 +4,16 @@ const LoginFrom = () => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [showData, setShowData] = useState(false);
+  const [auth, setAuth] = useState({});
   const getFormData = (e) => {
     e.preventDefault();
+    setAuth({
+      name: userName,
+      password: password,
+    });
     setShowData(true);
+    setUserName('');
+    setPassword('');
     console.log(userName, password);
   };
   return (
@@ -32,8 +39,8 @@ const LoginFrom = () => {
       <div>
         {showData ? (
           <div>
-            <h2> User Name is {userName}</h2>
-            <h3> Password is {password}</h3>{' '}
+            <h2> User Name is {auth.name}</h2>
+            <h3> Password is {auth.password}</h3>{' '}
           </div>
         ) : (
           <h2> No Data</h2>
